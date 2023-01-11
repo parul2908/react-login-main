@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.whole-container{
+    position: relative;
+    top: -80%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+}
+
+.first-Container{
+    width: 50%;
+    background:#111;
+    z-index: 0;
+    height: 100vh;
+}
+
+
+
+.second-container{
+    width: 50%;
+    background:#111;
+    z-index: 1;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+i{
+    color: rgba(0,0,0,0.5);
+    padding: 0 5px;
+    user-select: none;
+    cursor: default;
+}
+
+
+
+.box{
+    width: 130%;
+    margin: 12px 0px;
+    border-bottom: 2px solid black;
+}
+
+input{width: 75%;
+border: none;
+outline: none;
+color: white;
+font-size: 20px;
+padding: 5px 10px;
+background: none;
+}
+
+.box i{
+    width: 25px;
+    text-align: center;
+
+}
+
+.second-container h1{
+    color: white;
+    margin: 12px;
+}
+.yes{
+    color: rgb(56, 86, 255);
+    text-shadow: 0 0 12px  rgb(56, 86, 255);
+}
+
+div>p{
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+} 
+
+.row{
+    position: relative;
+    width: 720px;
+    display: flex;
+    padding: 10px 0;
+    white-space: nowrap;
+    font-size: 32px;
+    z-index: 0;
+    transform: rotate(-45deg);
+}
+
+
+.row div{
+    animation: animate1 80s linear infinite;
+    animation-delay: -80s;
+}
+
+.row div:nth-child(2){
+    animation: animate2 80s linear infinite;
+    animation-delay: -40s;
+}
+
+@keyframes animate1
+{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+@keyframes animate2
+{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+.row:nth-child(even) div{
+    animation: animate3 80s linear infinite;
+    animation-delay: -80s;
+}
+
+.row:nth-child(even) div:nth-child(2){
+    animation: animate4 80s linear infinite;
+    animation-delay: -40s;
+}
+
+@keyframes animate3
+{
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes animate4
+{
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 960px){
+    .whole-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .first-Container{
+        display: none;
+    }
+    .second-container{
+        width: 100%;
+        padding-bottom: 25px;
+    } 
+}
